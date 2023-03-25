@@ -1,0 +1,18 @@
+{
+  "name": "test-pages",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "repository": "https://github.com/denz93/test-pages.git",
+  "author": "Nhan Bach",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "vitest run",
+    "coverage": "vitest run --coverage && make-coverage-badge"
+  },
+  "devDependencies": {
+    "@vitest/coverage-istanbul": "^0.29.7",
+    "make-coverage-badge": "^1.2.0",
+    "vitest": "^0.29.7"
+  }
+}
