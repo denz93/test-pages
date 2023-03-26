@@ -1,0 +1,23 @@
+name: publish github pages
+on:
+  workflow_dispatch
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: main
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: yarn
+      - run: yarn coverage
+      - name: push
+        run: |
+          git checkout gb_pages
+          git cp -R coverage/* /docs
+          git add docs/*
+          git commit -m "Update page"
+          git push
+          
