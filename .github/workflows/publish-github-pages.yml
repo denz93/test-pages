@@ -17,7 +17,7 @@ jobs:
         run: |
           git fetch
           git checkout gb_pages
-          git cp -R coverage/* /docs
+          cp -R coverage/* /docs
           git add docs/*
           git commit -m "Update page"
           git push
