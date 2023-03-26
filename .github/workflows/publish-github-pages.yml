@@ -15,6 +15,7 @@ jobs:
       - run: yarn coverage
       - name: push
         run: |
+          git fetch
           git checkout gb_pages
           git cp -R coverage/* /docs
           git add docs/*
