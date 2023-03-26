@@ -15,6 +15,8 @@ jobs:
       - run: yarn coverage
       - name: push
         run: |
+          git config --global user.name 'denz93'
+          git config --global user.email 'bdnhan182@gmail.com'
           git fetch
           git checkout gb_pages
           cp -R ./coverage/* ./docs
