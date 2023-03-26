@@ -1,7 +1,6 @@
 name: publish github pages
 on:
   workflow_dispatch
-permissions: read-all|write-all
 jobs:
   commit:
     runs-on: ubuntu-latest
